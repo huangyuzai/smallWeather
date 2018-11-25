@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#87CEEB",
+    "navigationBarTitleText": "诗陌天气",
+    "navigationBarTextStyle":"white"
+  },
+  "networkTimeout": 60000
+}

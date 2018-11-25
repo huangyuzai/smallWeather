@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<!-- style="height:{{screenHeight}}px" -->
+<view class="container" style="background: linear-gradient({{startColor}}, {{endColor}}); min-height: {{screenHeight}}px">
+  <!-- wx:if="{{isSearch}}" -->
+  <view class="section"  style="top:{{positionTop}}px">
+    <view class="inputBox">
+      <input class="cityInput" placeholder-class="phcolor" bindinput="bindKeyInput" placeholder="请输入查询地址(市/区)" value="{{inputValue}}" />
+    </view>
+    <text class="searchBtn" bindtap="clickSeach" >查询</text>
+    <text class="" bindtap="hideSearch" >×</text>
+  </view>
+  <view class="weatherData" wx:if="{{isData}}">
+    <text class="cityName">{{cityName}}\t\t</text>
+    <text class="switch" bindtap="showSearch">[切换]\n</text>
+    <text class="temperature">{{weather.tmp}}<text class="temperatureSymbol">℃\n</text></text>
+    <view class="weatherCond">
+      <text>{{weather.cond_txt}}\t</text>
+      <!-- <image class="icon" src="../static/weatherIcon/{{weather.cond_code}}.png"></image> -->
+    </view>
+    <ul class="weatherUl">
+      <li class="weatherLi">
+        <text>体感温度\n{{weather.fl}}℃</text>
+      </li>
+      <li class="weatherLi">
+        <text>{{weather.wind_dir}}\n{{weather.wind_sc}}级</text>
+      </li>
+      <!-- <li class="weatherLi"> -->
+        <!-- <text>风向\n</text> -->
+      <!-- </li> -->
+      <li class="weatherLi">
+        <text>风速\n{{weather.wind_spd}}\tKM/H</text>
+      </li>
+      <li class="weatherLi">
+        <text>湿度\n{{weather.hum}}%</text>
+      </li>
+    </ul>
+  </view>
+  <view class="forecast">
+    <ul class="weatherForecast">
+      <li wx:for="{{forecashData}}" wx:for-item="forecast" wx:key="{{index}}">
+        <view>
+          <text class="dateTitle" wx:if="{{index == 0}}">今天</text>
+          <text class="dateTitle" wx:if="{{index == 1}}">明天</text>
+          <text class="dateTitle" wx:if="{{index == 2}}">后天</text>
+          <text>\n{{forecast.date}}</text>
+        </view>
+        <image src="../static/weatherIcon/{{forecast.cond_code_d}}.png"></image>
+        <text class="forecastTemperature">{{forecast.tmp_min}}\t~\t{{forecast.tmp_max}}℃</text>
+        <text class="stateChange" wx:if="{{forecast.cond_code_d != forecast.cond_code_n}}">{{forecast.cond_txt_d}}<text class="zhuan">\t/\t</text>{{forecast.cond_txt_n}}</text>
+        <text class="stateChange" wx:if="{{forecast.cond_code_d == forecast.cond_code_n}}">{{forecast.cond_txt_d}}</text>
+      </li>
+    </ul>
+  </view>
+  <view class="weatherSource">
+     <text>数据来源: 和风天气</text>
+  </view>
+</view>

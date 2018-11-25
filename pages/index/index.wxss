@@ -1,0 +1,145 @@
+.container {
+  position: relative;
+  color: #fff;
+  padding: 0;
+  width: 100%;
+  padding-bottom: 60px;
+}
+/*搜索区域*/
+.section {
+  position:absolute;
+  width:100%;
+  padding:20rpx;
+  box-sizing:border-box;
+  display:flex;
+  justify-content:center;
+  transition: all .2s;
+  height: 100px;
+  align-items: center;
+}
+/*搜索框的容器*/
+.inputBox {
+  width:60%;
+  display:inline-block;
+}
+/*搜索框*/
+.cityInput {
+  margin-right:30rpx;
+  color:#fff;
+}
+/*天气数据区域*/
+.weatherData {
+  padding: 0 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 100px;
+}
+/*温度*/
+.temperature {
+  font-size:60px;
+  margin-top:20px;
+  display:inline-block;
+  margin-bottom:8rpx;
+}
+/*摄氏度符号*/
+.temperatureSymbol {
+  font-size: 20px;
+  float: right;
+  margin-top: 10px;
+  margin-left: 10rpx;
+}
+/*数据来源*/
+.weatherSource {
+  position:absolute;
+  bottom:10rpx;
+  font-size:12px;
+  opacity:.3;
+  overflow: hidden;
+}
+/*天气状况*/
+.weatherCond {
+  font-size: 30px;
+}
+/*切换*/
+.switch {
+  font-size: 14px;
+}
+/*查询按钮*/
+.searchBtn {
+  margin-right: 20px;
+}
+/*预报的外层view*/
+.forecast {
+  width: 100%;
+}
+/*预报的ul*/
+.weatherForecast {
+  width:100%;
+  display:block;
+  overflow: hidden;
+  font-size: 12px;
+  margin-top: 50px;
+  word-break: bra
+}
+/*预报的子级*/
+.weatherForecast li {
+  width: 33%;
+  display: block;
+  text-align: center;
+  border-right: solid 1px rgba(255,255,255,.2);
+  float: left;
+  min-height: 190px;
+
+}
+.weatherForecast li:last-child {
+  border-right: none;
+}
+/*天气状态图标*/
+.weatherForecast image {
+  width:60px;
+  height:60px;
+  display:block;
+  margin:15px auto;
+}
+/*日期的文字描述*/
+.dateTitle {
+  font-size: 22px;
+}
+/*预报的温度*/
+.forecastTemperature {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+}
+/*温度里面的状态变化*/
+.stateChange {
+  font-size: 16px;
+  min-height:42px;
+  word-break:break-all;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+.weatherUl {
+  color: #333;
+  font-size: 12px;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  color: #fff;
+  margin-top: 80rpx;
+}
+.weatherLi {
+  display: inline-block;
+  width: 25%;
+  float: left;
+  line-height: 20px;
+}
+.phcolor {
+  color: #fff;
+}
+.zhuan {
+  font-size: 14px;
+  color: rgba(255,255,255,.8);
+}
