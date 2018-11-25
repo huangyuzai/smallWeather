@@ -39,7 +39,7 @@ Page({
         wx.request({
           url: 'https://restapi.amap.com/v3/geocode/regeo',
           data: {
-            'key': '100414343177a6d79ac8d232b473c272',
+            'key': '你的key',
             'location': location
           },
           success: function(res) {
@@ -106,7 +106,7 @@ Page({
         data: {
           'address': inputValue,
           'output': 'json',
-          'key':'100414343177a6d79ac8d232b473c272'
+          'key':'你的key'
         },
         success: function(res){
           wx.hideLoading()
@@ -150,7 +150,7 @@ Page({
     wx.request({
       url: 'https://free-api.heweather.com/s6/weather',
       data: {
-        'key': '8105e3b40ae64abd801e6c9a97b9a60f',
+        'key': '你的key',
         'location': that.data.adcode           /*根据adcode值获取天气数据*/
       },
       success: function (res) {
